@@ -7,9 +7,9 @@ import DataCard from './components/DataCard';
 const App = () => {
   return (
     <>
-      <div className="relative h-screen bg-gray-100  mt-0 pr-15 mb-1 ">
+      <div className="relative mx-auto h-screen bg-gray-100  mt-0 pr-15 mb-1 ">
         <NavBar className="sticky top-0 left-10 w-full z-10" /> 
-        <Sidebar className="fixed top-0 left-0 h-full z-20" /> {/* Sidebar positioned at the left */}
+        <Sidebar className="absolute top-0 left-0 h-full z-20" /> {/* Sidebar positioned at the left */}
         <div className="ml-[130px] pt-1 mr-1 "> {/* Space for Navbar and Sidebar */}
           <DataCard 
             exchange="Binance"
@@ -18,9 +18,9 @@ const App = () => {
             change="-23.00%"
             marketCap="2346B"
           />
-          <Main  className="ml-1"/>
+          <Main  className="ml-1 mb-3"/>
         </div>
-        <div className="absolute top-[135px] right-0"> {/* Adjusted positioning */}
+        <div className="absolute top-[135px] right-0 mt-4"> {/* Adjusted positioning */}
           <RedBox />
         </div>
       </div>
